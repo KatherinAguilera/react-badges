@@ -1,20 +1,31 @@
 import React from 'react';
 
 class BadgeForm extends React.Component {
+  // iniciarlizar el estado
+  state = {
+    firstName: 'Richard',
+    lastName: '',
+    email: '',
+    jobTitle: '',
+    twitter: ''
+  };
+
   handleChange = e => {
-    console.log({
-      name: e.target.name,
-      value: e.target.value,
+    // setState funcion de la clase component 
+    this.setState({
+      // le pasamos el objeto con la inf que queremos guardar
+      [e.target.name]: e.target.value,
     });
   };
 
   handleClick = e => {
     console.log('Button was clicked');
   };
-// hacer que no recargue la pagina al dar clic en el boton
+
   handleSubmit = e => {
     e.preventDefault();
     console.log('Form was submitted');
+    console.log(this.state);
   };
 
   render() {
@@ -30,6 +41,52 @@ class BadgeForm extends React.Component {
               className="form-control"
               type="text"
               name="firstName"
+              // leer el estado
+              value={this.state.firstName}
+            />
+          </div>
+
+          <div className="form-group">
+            <label>Last Name</label>
+            <input
+              onChange={this.handleChange}
+              className="form-control"
+              type="text"
+              name="lastName"
+              value={this.state.lastName}
+            />
+          </div>
+
+          <div className="form-group">
+            <label>Email</label>
+            <input
+              onChange={this.handleChange}
+              className="form-control"
+              type="email"
+              name="email"
+              value={this.state.email}
+            />
+          </div>
+
+          <div className="form-group">
+            <label>Job Title</label>
+            <input
+              onChange={this.handleChange}
+              className="form-control"
+              type="text"
+              name="jobTitle"
+              value={this.state.jobTitle}
+            />
+          </div>
+
+          <div className="form-group">
+            <label>Twitter</label>
+            <input
+              onChange={this.handleChange}
+              className="form-control"
+              type="text"
+              name="twitter"
+              value={this.state.twitter}
             />
           </div>
 
@@ -42,4 +99,4 @@ class BadgeForm extends React.Component {
   }
 }
 
- export default BadgeForm;
+export default BadgeForm;
