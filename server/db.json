@@ -68,6 +68,30 @@
       "jobTitle": "Samurai",
       "twitter": "kurama",
       "id": "hKmYx8v"
+    },
+    {
+      "firstName": "Ricky",
+      "lastName": "Tim",
+      "email": "ricky@gmail.com",
+      "jobTitle": "Lawyer",
+      "twitter": "ricky",
+      "id": "lcpyURq"
+    },
+    {
+      "firstName": "Ricky",
+      "lastName": "James",
+      "email": "james@hotmail.com",
+      "jobTitle": "Engineer",
+      "twitter": "james",
+      "id": "jnTx6bs"
+    },
+    {
+      "firstName": "Luz",
+      "lastName": "Mejia",
+      "email": "luz@gmail.com",
+      "jobTitle": "Desigener",
+      "twitter": "luz",
+      "id": "KBU-WjC"
     }
   ]
 }
