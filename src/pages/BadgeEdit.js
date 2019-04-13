@@ -1,16 +1,15 @@
 import React from 'react';
 
-import './styles/BadgeNew.css';
+import './styles/BadgeEdit.css';
 import header from '../images/platziconf-logo.svg';
 import Badge from '../components/Badge';
 import BadgeForm from '../components/BadgeForm';
-// import Navbar from '../components/Navbar';
-import api from '../api';
 import PageLoading from '../components/PageLoading';
-class BadgeNew extends React.Component {
+import api from '../api';
+
+class BadgeEdit extends React.Component {
   state = {
-    // inicializar el estado
-    loading: false,
+    loading: true,
     error: null,
     form: {
       firstName: '',
@@ -20,44 +19,57 @@ class BadgeNew extends React.Component {
       twitter: '',
     },
   };
-  // enviar a la api
-  handleSubmit = async e => {
-    e.preventDefault();
+// cuando ocurra buscar los datos
+  componentDidMount() {
+    this.fetchData();
+  }
+
+  fetchData = async e => {
     this.setState({ loading: true, error: null });
 
     try {
-      await api.badges.create(this.state.form);
-      this.setState({ loading: false });
-      // envia dato y lleva a BadgesList
-      this.props.history.push('/badges');
+      // this.props.match.params.badgeId de react router
+      const data = await api.badges.read(this.props.match.params.badgeId);
+
+      this.setState({ loading: false, form: data });
     } catch (error) {
       this.setState({ loading: false, error: error });
     }
   };
+
   handleChange = e => {
     this.setState({
       form: {
-        // añadir
         ...this.state.form,
         [e.target.name]: e.target.value,
       },
     });
   };
 
+  handleSubmit = async e => {
+    e.preventDefault();
+    this.setState({ loading: true, error: null });
+
+    try {
+      await api.badges.update(this.props.match.params.badgeId, this.state.form);
+      this.setState({ loading: false });
+
+      this.props.history.push('/badges');
+    } catch (error) {
+      this.setState({ loading: false, error: error });
+    }
+  };
+
   render() {
-    if (this.state.loading){
+    if (this.state.loading) {
       return <PageLoading />;
     }
+
     return (
       <React.Fragment>
-        {/* <Navbar /> */}
-        <div className="BadgeNew__hero">
-          {/* <img
-            className="BadgeNew_hero-image img-fluid"
-            src={header}
-            alt="Logo" /> */}
+        <div className="BadgeEdit__hero">
           <img
-            className="BadgeNew__hero-image img-fluid"
+            className="BadgeEdit__hero-image img-fluid"
             src={header}
             alt="Logo"
           />
@@ -67,18 +79,17 @@ class BadgeNew extends React.Component {
           <div className="row">
             <div className="col-6">
               <Badge
-              // cambiar el estado de acuerdo al BadgeForm || valor provicional
-                firstName={this.state.form.firstName || 'First_Name'}
-                lastName={this.state.form.lastName|| 'Last_Name'}
+                firstName={this.state.form.firstName || 'FIRST_NAME'}
+                lastName={this.state.form.lastName || 'LAST_NAME'}
                 twitter={this.state.form.twitter || 'twitter'}
-                jobTitle={this.state.form.jobTitle || 'Job_Title'}
+                jobTitle={this.state.form.jobTitle || 'JOB_TITLE'}
                 email={this.state.form.email || 'EMAIL'}
                 avatarUrl="https://www.gravatar.com/avatar/21594ed15d68ace3965642162f8d2e84?d=identicon"
               />
             </div>
 
             <div className="col-6">
-            <h1>New Attendant</h1>
+              <h1>Edit Attendant</h1>
               <BadgeForm
                 onChange={this.handleChange}
                 onSubmit={this.handleSubmit}
@@ -93,4 +104,4 @@ class BadgeNew extends React.Component {
   }
 }
 
-export default BadgeNew;
+export default BadgeEdit;

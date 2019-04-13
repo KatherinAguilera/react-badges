@@ -42,19 +42,19 @@
       "lastName": "Corkery",
       "email": "Van_Schimmel@yahoo.com",
       "jobTitle": "Dynamic Tactics Liaison",
-      "twitter": "KellyCorkery06275-3676",
+      "twitter": "KellyCorkery",
       "avatarUrl": "https://www.gravatar.com/avatar/00e35de53a06a655fe5b6ac8b96bdb84?d=identicon"
     },
     {
       "firstName": "Juan",
       "lastName": "Lopez",
-      "email": "juankmilonn@hotmail.com",
+      "email": "juan@hotmail.com",
       "jobTitle": "Designer",
       "twitter": "juanlp",
       "id": "-cHFWql"
     },
     {
-      "firstName": "Winny",
+      "firstName": "Winnyto",
       "lastName": "Aguilera",
       "email": "winnyaguilera@hotmail.com",
       "jobTitle": "Agent",
@@ -92,6 +92,14 @@
       "jobTitle": "Desigener",
       "twitter": "luz",
       "id": "KBU-WjC"
+    },
+    {
+      "firstName": "Edward",
+      "lastName": "Elrik",
+      "email": "edward@gmail.com",
+      "jobTitle": "Alchemist",
+      "twitter": "edwardmetal",
+      "id": "vEU6Ttn"
     }
   ]
 }
