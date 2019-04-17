@@ -1,10 +1,11 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+// import ReactDOM from 'react-dom';
 
 import { Link } from 'react-router-dom';
 import './styles/BadgeDetails.css';
 import confLogo from '../images/platziconf-logo.svg';
 import Badge from '../components/Badge';
+import DeleteBadgeModal from '../components/DeleteBadgeModal';
 
 function BadgeDetails(props){
   // enviar la data a componente Container <BadgeDetailsContainer>
@@ -50,13 +51,16 @@ function BadgeDetails(props){
             </div>
 
             <div>
-              <button className="btn btn-danger Delete">Delete</button>
-              {/* Portales */}
-              {/* {ReactDOM.createPortal(que queremos, donde)} */}
-              {ReactDOM.createPortal(
-                <h1>Hola, no estoy aqui</h1>, 
-                document.getElementById('modal')
-                )}
+            {/* onClick manejar para cerrar el modal */}
+            <button onClick={props.onOpenModal} className="btn btn-danger">
+                  Delete
+                </button>
+                <DeleteBadgeModal
+                  // isOpen propiedad para que modal se despliegue o no
+                  isOpen={props.modalIsOpen}
+                  onClose={props.onCloseModal}
+                  onDeleteBadge={props.onDeleteBadge}
+                />
             </div>
           </div>
         </div>

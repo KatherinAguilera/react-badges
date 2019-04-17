@@ -86,28 +86,12 @@
       "id": "jnTx6bs"
     },
     {
-      "firstName": "Luz",
-      "lastName": "Mejia",
-      "email": "luz@gmail.com",
-      "jobTitle": "Desigener",
-      "twitter": "luz",
-      "id": "KBU-WjC"
-    },
-    {
       "firstName": "Edward",
       "lastName": "Elrik",
       "email": "edward@gmail.com",
       "jobTitle": "Alchemist",
       "twitter": "edwardmetal",
       "id": "vEU6Ttn"
-    },
-    {
-      "firstName": "",
-      "lastName": "",
-      "email": "",
-      "jobTitle": "",
-      "twitter": "",
-      "id": "IoPRqEN"
     }
   ]
 }
