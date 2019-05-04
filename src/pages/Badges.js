@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 import './styles/Badges.css';
-import confLogo from '../images/badge-header.svg';
+import confLogo from '../images/astronaut.png';
 import BadgesList from '../components/BadgesList';
 import PageLoading from '../components/PageLoading';
 import PageError from '../components/PageError';
@@ -58,6 +58,8 @@ class Badges extends React.Component {
                 className="Badges_conf-logo"
                 src={confLogo}
                 alt="Conf Logo"
+                width= "120"
+                height= "119"
               />
             </div>
           </div>

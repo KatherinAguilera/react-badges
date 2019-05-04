@@ -3,7 +3,7 @@ import React from 'react';
 
 import { Link } from 'react-router-dom';
 import './styles/BadgeDetails.css';
-import confLogo from '../images/platziconf-logo.svg';
+import confLogo from '../images/astronaut.png';
 import Badge from '../components/Badge';
 import DeleteBadgeModal from '../components/DeleteBadgeModal';
 
@@ -31,7 +31,7 @@ function BadgeDetails(props){
       <div className="container">
         <div className="row">
           <div className="col-6">
-            <img src={confLogo} alt="Logo de la Conferencia" />
+            <img src={confLogo} alt="Logo de la Conferencia" width="100" height="100"/>
           </div>
           <div className="col-6 BadgeDetails__hero-attendant-name">
             <h1>
@@ -54,7 +54,7 @@ function BadgeDetails(props){
           />
         </div>
         <div className="col Actions">
-          <h2>Actions</h2>
+          <h2 className="h2">Actions</h2>
           <div>
             <div>
               {/* <button

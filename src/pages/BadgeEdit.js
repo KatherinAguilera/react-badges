@@ -1,7 +1,7 @@
 import React from 'react';
 
 import './styles/BadgeEdit.css';
-import header from '../images/platziconf-logo.svg';
+import header from '../images/astronaut.png';
 import Badge from '../components/Badge';
 import BadgeForm from '../components/BadgeForm';
 import PageLoading from '../components/PageLoading';
@@ -72,12 +72,14 @@ class BadgeEdit extends React.Component {
             className="BadgeEdit__hero-image img-fluid"
             src={header}
             alt="Logo"
+            width="100"
+            height="100"
           />
         </div>
-
-        <div className="container">
+        <div className="Edit-badges">
+        <div className="container Edit">
           <div className="row">
-            <div className="col-6">
+            <div className="Badge-edit">
               <Badge
                 firstName={this.state.form.firstName || 'FIRST_NAME'}
                 lastName={this.state.form.lastName || 'LAST_NAME'}
@@ -88,7 +90,7 @@ class BadgeEdit extends React.Component {
               />
             </div>
 
-            <div className="col-6">
+            <div className="Badge-form">
               <h1>Edit Attendant</h1>
               <BadgeForm
                 onChange={this.handleChange}
@@ -98,6 +100,7 @@ class BadgeEdit extends React.Component {
               />
             </div>
           </div>
+        </div>
         </div>
       </React.Fragment>
     );

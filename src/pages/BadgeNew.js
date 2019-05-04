@@ -1,7 +1,7 @@
 import React from 'react';
 
 import './styles/BadgeNew.css';
-import header from '../images/platziconf-logo.svg';
+import header from '../images/astronaut.png';
 import Badge from '../components/Badge';
 import BadgeForm from '../components/BadgeForm';
 // import Navbar from '../components/Navbar';
@@ -62,10 +62,10 @@ class BadgeNew extends React.Component {
             alt="Logo"
           />
         </div>
-
+        <div className="Edit-badges">
         <div className="container">
           <div className="row">
-            <div className="col-6">
+            <div className="Badge-edit">
               <Badge
               // cambiar el estado de acuerdo al BadgeForm || valor provicional
                 firstName={this.state.form.firstName || 'First_Name'}
@@ -77,7 +77,7 @@ class BadgeNew extends React.Component {
               />
             </div>
 
-            <div className="col-6">
+          <div className="Badge-form">
             <h1>New Attendant</h1>
               <BadgeForm
                 onChange={this.handleChange}
@@ -87,6 +87,7 @@ class BadgeNew extends React.Component {
               />
             </div>
           </div>
+        </div>
         </div>
       </React.Fragment>
     );

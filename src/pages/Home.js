@@ -2,8 +2,8 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 
 import './styles/Home.css';
-import platziconfLogoImage from '../images/platziconf-logo.svg';
-import astronautsImage from '../images/astronauts.svg';
+import confLogoImage from '../images/conference-icon.png';
+import astronautsImage from '../images/astronaut.png';
 
 export default class Home extends Component {
   render() {
@@ -11,9 +11,9 @@ export default class Home extends Component {
       <div className="Home">
         <div className="container">
           <div className="row">
-            <div className="Home__col col-12 col-md-4">
+            <div className="Home__col col-12 col-md-3">
               <img
-                src={platziconfLogoImage}
+                src={confLogoImage}
                 alt="Platzi Conf Logo"
                 className="img-fluid mb-2"
               />

@@ -1,16 +1,18 @@
 import React from 'react';
 
 import './styles/Badge.css';
-import confLogo from '../images/badge-header.svg';
+// import confLogo from '../images/badge-header.svg';
 import Gravatar from './Gravatar';
+import Navbar from './Navbar';
 
 class Badge extends React.Component {
   render() {
     return (
       <div className="Badge">
-        <div className="Badge__header">
+        {/* <div className="Badge__header">
           <img src={confLogo} alt="Logo de la conferencia" />
-        </div>
+        </div> */}
+        <Navbar/>
 
         <div className="Badge__section-name">
           {/* <img
@@ -29,7 +31,7 @@ class Badge extends React.Component {
           <div>@{this.props.twitter}</div>
         </div>
 
-        <div className="Badge__footer">#platziconf</div>
+        <div className="Badge__footer">#tecnologyconf</div>
       </div>
     );
   }

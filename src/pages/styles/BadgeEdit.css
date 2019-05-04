@@ -6,10 +6,35 @@
   margin-bottom: 1rem;
   color: #ffffff;
 
-   display: flex;
+  display: flex;
   justify-content: center;
 }
-
- .BadgeEdit__hero-image {
+/* .Edit{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+} */
+.BadgeEdit__hero-image {
   max-height: 100px;
-} 
+}
+.Edit-badges{
+  display: flex;
+}
+.Badge-edit, .Badge-form{
+  width: 45%;
+  margin-left: 20px;
+}
+@media screen and (max-width: 768px) {
+  .Edit-badges{
+    display: block;
+    width: 100%;
+  }
+  .Badge-edit, .Badge-form{
+    width: 100%;
+    margin-right: 20px;
+    margin-bottom: 15px;
+  }
+  .Badge-edit{
+    text-align: center;
+  }
+}
