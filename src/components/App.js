@@ -12,7 +12,7 @@ import  BadgeDetailsContainer from '../pages/BadgeDetailsContainer';
 
 function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename = '/'>
       <Layout>
 
       {/* switch renderizar solo una ruta */}
