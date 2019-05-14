@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 import './styles/Home.css';
 import confLogoImage from '../images/conference-icon.png';
-import astronautsImage from '../images/astronaut.png';
+import astronautsImage from '../images/cohete.png';
 
 export default class Home extends Component {
   render() {
@@ -24,7 +24,7 @@ export default class Home extends Component {
               </Link>
             </div>
 
-            <div className="Home__col d-none d-md-block col-md-8">
+            <div className="Home__col d-none d-md-block col-md-8 Space">
               <img
                 src={astronautsImage}
                 alt="Astronauts"

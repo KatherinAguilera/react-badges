@@ -3,14 +3,29 @@
   min-height: calc(100vh - 60px);
   background: url('../../images/starts.svg'), #1B1B25;
   background-repeat: repeat;
-  animation: aitf 5s linear infinite;
   color: #ffffff;
   display: flex;
   align-items: center;
 }
 @keyframes aitf {
-	0% { background-position: 0% 50%; }
-	100% { background-position: 100% 50%; }
+	0% {
+    transform: translate(0) translateY(0)
+  }
+  20% {
+    transform: translate(-20px) translateY(20px)
+  }
+	40% {
+    transform: translate(-10px) translateY(10px)
+  }
+  60% {
+    transform: translate(8px) translateY(8px)
+  }
+  80% {
+    transform: translate(20px) translateY(20px)
+  }
+  100% {
+    transform: translate(0) translateY(0)
+  }
 }
 .Home__col {
   display: flex;
@@ -18,7 +33,12 @@
   justify-content: center;
   align-items: center;
 }
+.Space{
+  position: relative;
+  left: 100px;
+  animation: aitf 2s linear infinite;
 
+}
 @media screen and (min-width: 768px) {
   .Home__col {
     align-items: flex-start;
